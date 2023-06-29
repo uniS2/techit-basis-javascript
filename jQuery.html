@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jQuery 기초</title>
+</head>
+
+<body>
+  <h1>jQuery</h1>
+  <p>
+    [구글링] 언어/라이브러리 + 원하는 기능
+
+    1. 간결한 문법
+    2. 편리한 API
+    3. 크로스 브라우징
+
+    $(선택자).행위;
+  </p>
+  <!-- 1. <textarea id="content">jQuery 이벤트</textarea> -->
+  <button id="click">클릭</button>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script>
+    // 1. console.log($('#content').val());
+    $('#click').click(function () {
+      console.log('hello');
+    });
+    // 익명함수
+    /* 스타크래프트
+    $('#drone').click(function () {
+      $('#spit').fadeIn()
+      $('#spit').animate({ left: '+=250' });
+      $('#spit').fadeOut(function () {
+        hp = hp - 1;
+        $('#hp').text("Hp :" + hp);
+        if (hp == 0) {
+          $('#bunker').fadeOut();
+        };
+      });
+      $('spit').css({ left: '150px' });
+    }); */
+  </script>
+</body>
+
+</html>

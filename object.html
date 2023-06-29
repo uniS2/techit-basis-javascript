@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>객체(Object)</title>
+</head>
+
+<body>
+  <h1>객체(Object)</h1>
+  <script>
+    var person = {
+      name: 'jocoding',
+      sayHello: function () { console.log('hello'); }
+    }
+    console.log(person.name);
+    person.sayHello();
+
+    /* 내장 객체 -> var 변수 = new Date() */
+    // 1. Date 객체 생성
+    var now = new Date();
+    // 2. 연도를 가져오는 메서드 .getFullYear()
+    console.log(now.getFullYear());
+    // 3. 월 정보를 가져오는 메서드 .getMonth() {0: 1월, 1: 2월, ... 10: 11월, 11: 12월}
+    console.log(now.getMonth()+1+'월');
+    // 4. 일 정보를 가져오는 메서드 .getDate()
+    console.log(now.getDate()+'일');
+    // 5. 1970년 1월 1일 00:00:00을 기준으로 흐른 시간을 밀리초로 표현하는 메서드 .getTime()
+    console.log(now.getTime());
+    // 6. 특정 일의 Date 객체 생성
+    var christmas = new Date('2023-12-25');
+    console.log(christmas);
+    // 7. 특정 ms의 Date 객체 생성
+    var ms = new Date(1000);
+    console.log(ms);
+    // 디데이 구하기: 날짜 = 차이 + 1
+    var timeDiff = christmas.getTime() - now.getTime();
+    var Dday = Math.floor( timeDiff / (1000 * 60 * 60 * 24) );
+    console.log(Dday);
+    // 1000일 구하기
+    var ms1 = now.getTime() + 999 * (1000 * 60 * 60 * 24);
+    var thousand = new Date(ms1);
+    var thousandDate = thousand.getFullYear() + '.' + (thousand.getMonth()+1) + '.' + thousand.getDate();
+    console.log('지금으로부터 1000일 :'+thousandDate)
+  </script>
+</body>
+
+</html>

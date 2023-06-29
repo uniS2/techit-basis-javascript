@@ -1,0 +1,1 @@
+document.write('오늘도 열심히 ★')
